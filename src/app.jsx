@@ -4,8 +4,7 @@ import ToDoList from "./components/ToDoList";
 
 export function App() {
 
-    const [todos, setTodos] = useState([{},]);
-    fetch("https://assets.breatheco.de/apis/fake/todos/user/oscar").then((response) => response.json()).then((data) => setTodos(data))
+    const [todos, setTodos] = useState([{id: "example", label:"", done: false },]);
     const ToDoRef = useRef();
     const toggleToDo = (id) => {
         const NewToDos = [...todos];
@@ -21,20 +20,6 @@ export function App() {
         })
         ToDoRef.current.value = null;
     }
-    
-    fetch("https://assets.breatheco.de/apis/fake/todos/user/oscar", {
-        "method": "PUT",
-        "headers": {
-            "Content-Type": "application/json"
-        },
-        "body": JSON.stringify(todos)
-    })
-        .then(response => {
-            console.log(response);
-        })
-        .catch(err => {
-            console.error(err);
-        });
 
     const deleteToDo = () => {
         const NewToDos = todos.filter((todo) => !todo.done)
