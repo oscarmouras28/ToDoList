@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+body {
+    background-image: url("https://thumbs.dreamstime.com/b/grey-linen-canvas-la-imagen-de-fondo-textura-128776879.jpg");
+}
+
+#titulo {
+    font-size: 8REM;
+    font-family: 'Comforter', cursive;
+}
+
+#navbar {
+    border-bottom: 3px solid rgb(189, 210, 232);
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG_bllPRXeMEt5aiBc1G3tOPgXFSXclCs82A&usqp=CAU");
+    background-repeat: repeat;
+}

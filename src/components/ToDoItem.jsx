@@ -6,10 +6,10 @@ const ToDoItem = ({ todo, toggleToDo }) => {
         toggleToDo(id);
         };
     return (
-        <li>
-            <input type="checkbox" checked={done} onChange={ToDoClick} />
+        <label className='list-group-item'>
+            <input className='form-check-input me-1' type="checkbox" checked={done} onChange={ToDoClick} />
             {label}
-        </li>
+        </label>
     );
 }
 
